@@ -17,3 +17,4 @@ if ((num1 >= 40 && num1 <= 60) && (num1 >= 40 && num1 <= 60)) {
 } else {
     console.log("You can't access the function");
 }
+
