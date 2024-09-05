@@ -1,20 +1,20 @@
 // Task-1:
 // Count how many times a string has the letter a
 
-const str = 'Dhaka'
-
-const newS = str.split('')
-
-for (let i = 0; i < newS.length; i++) {
-    let count = 0
-    console.log(newS[i]);
-    if (newS[i] === 'a') {
-        console.log(count++);
-    } else {
-        console.log(count);
+function vowel(givenStr) {
+    let arr = givenStr.split('')
+    console.log(arr);
+    let count = 1
+    let res
+    for(let i = 0; i < arr.length; i++) {
+        // console.log(arr[i]);
+        if (arr[i] === 'a'){
+            res = count++
+        }
     }
-    count++
+    return res
+
 }
 
 
-console.log(newS);
+console.log(vowel('animalfarm'));
