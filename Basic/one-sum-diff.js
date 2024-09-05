@@ -18,3 +18,4 @@ console.log(checkSumDiff(8, 0));
 console.log(checkSumDiff(6, 2));
 console.log(checkSumDiff(18, 10));
 console.log(checkSumDiff(4, 4));
+console.log(checkSumDiff(20, 12));
