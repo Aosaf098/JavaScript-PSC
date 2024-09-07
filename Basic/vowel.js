@@ -20,3 +20,5 @@ function vowel(givenStr) {
 
 console.log(vowel('Favourite'));
 console.log(vowel('FAVOURITE'));
+
+

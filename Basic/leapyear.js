@@ -7,3 +7,19 @@ if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
 } else {
     console.log(`${year} is not a leap year`)
 }
+
+// Using Date Object
+
+
+function leapYear(year) {
+    const d = new Date(year, 1, 29).getDate() === 29
+    if (d) {
+        return `${year} is a leap year`
+    } else {
+        return `${year} is not a leap year`
+    }
+}
+
+console.log(leapYear(2024));
+
+
