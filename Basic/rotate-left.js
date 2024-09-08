@@ -8,3 +8,10 @@ function rotateLeft(integers) {
 console.log(rotateLeft([3, 4, 5]));
 
 
+// Spread Operator
+
+const num1 = [2, 4, 5, 6]
+const num2 = [3, 7, 2, 6]
+
+const nj = [...num1, ...num2]
+console.log(nj);
