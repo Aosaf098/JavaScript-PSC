@@ -1,0 +1,96 @@
+section{
+    margin: 20px 0px;
+}
+#div-3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+input{
+    margin-bottom: 10px;
+}
+.slideshow{
+    width: 400px;
+    position: relative;
+}
+#slide{
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+}
+#prev{
+    font-size: 36px;
+    text-decoration: none;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    cursor: pointer;
+    color: hotpink;
+}
+#next{
+    font-size: 36px;
+    text-decoration: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    cursor: pointer;
+    color: hotpink;
+}
+#prev:hover, #next:hover{
+    color: red;
+}
+#dragList{
+    list-style: none;
+}
+.drag-item{
+    background-color: slateblue;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: move;
+    width: 200px;
+    text-align: center;
+}
+.toggle{
+    width: 60px;
+    height: 34px;
+    border-radius: 34px;
+    background-color: #ccd;
+    position: relative;
+    cursor: pointer;
+    transition: backgrounnd-color 0.3s;
+}
+.toggle::before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+.toggle.on {
+    background-color: #66bb6a;
+}
+.toggle.on::before {
+    transform: translateX(26px);
+}
+.progress{
+    width: 300px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-bar{
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s;
+}
+#div-10{
+    width: 50px;
+    height: 50px;
+    background-color: #4caf50;
+}

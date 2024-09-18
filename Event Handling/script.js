@@ -68,53 +68,38 @@ function updateImage() {
 
 // Write a JavaScript program to implement drag-and-drop functionality to allow users to reorder items in a list.
 
-const dragList = document.getElementById('dragList');
-let draggedItem = null;
 
-// Add event listeners for drag and drop events
-dragList.addEventListener('dragstart', handleDragStart);
-dragList.addEventListener('dragover', handleDragOver);
-dragList.addEventListener('drop', handleDrop);
+// Write a JavaScript program to implement a toggle switch that changes its state when clicked.
 
-// Drag start event handler
-function handleDragStart(event) {
-  draggedItem = event.target;
-  event.dataTransfer.effectAllowed = 'move';
-  event.dataTransfer.setData('text/html', draggedItem.innerHTML);
-  event.target.style.opacity = '0.5';
+const toggle = document.querySelector('.toggle')
+
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('on')
+})
+
+
+// Write a JavaScript program to create a progress bar that updates its width based on task completion.
+
+function updateProgress(percentage) {
+    const innerProgress = document.getElementById('progress-fill')
+    innerProgress.style.width = `${percentage}%`
 }
 
-// Drag over event handler
-function handleDragOver(event) {
-  event.preventDefault();
-  event.dataTransfer.dropEffect = 'move';
-  const targetItem = event.target;
-  if (targetItem !== draggedItem && targetItem.classList.contains('drag-item')) {
-    const boundingRect = targetItem.getBoundingClientRect();
-    const offset = boundingRect.y + (boundingRect.height / 2);
-    if (event.clientY - offset > 0) {
-      targetItem.style.borderBottom = 'solid 2px #000';
-      targetItem.style.borderTop = '';
-    } else {
-      targetItem.style.borderTop = 'solid 2px #000';
-      targetItem.style.borderBottom = '';
+updateProgress(50)
+
+
+// Write a JavaScript program that adds a keydown event listener to a text input to detect when the "Enter key" is pressed.
+
+document.getElementById('input-9').addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        console.log('Someone Pressed the Enter Button');
+        document.body.style.backgroundColor = 'red'
     }
-  }
-}
+})
 
-// Drop event handler
-function handleDrop(event) {
-  event.preventDefault();
-  const targetItem = event.target;
-  if (targetItem !== draggedItem && targetItem.classList.contains('drag-item')) {
-    if (event.clientY > targetItem.getBoundingClientRect().top + (targetItem.offsetHeight / 2)) {
-      targetItem.parentNode.insertBefore(draggedItem, targetItem.nextSibling);
-    } else {
-      targetItem.parentNode.insertBefore(draggedItem, targetItem);
-    }
-  }
-  targetItem.style.borderTop = '';
-  targetItem.style.borderBottom = '';
-  draggedItem.style.opacity = '';
-  draggedItem = null;
-}
+
+// Write a JavaScript function that listens for a double click on an element and performs a specific action.
+
+document.getElementById('div-10').addEventListener('dblclick', () => {
+    document.getElementById('div-10').style.backgroundColor = 'slateblue'
+})

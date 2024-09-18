@@ -4,61 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        section{
-            margin: 20px 0px;
-        }
-        #div-3{
-            width: 100px;
-            height: 100px;
-            background-color: red;
-        }
-        input{
-            margin-bottom: 10px;
-        }
-        .slideshow{
-            width: 400px;
-            position: relative;
-        }
-        #slide{
-            /* display: none; */
-            width: 100%;
-            height: 100%;
-            /* border: 1px solid green; */
-        }
-        #prev{
-            font-size: 36px;
-            text-decoration: none;
-            position: absolute;
-            top: 70px;
-            left: 20px;
-            cursor: pointer;
-            color: hotpink;
-        }
-        #next{
-            font-size: 36px;
-            text-decoration: none;
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            cursor: pointer;
-            color: hotpink;
-        }
-        #prev:hover, #next:hover{
-            color: red;
-        }
-        #dragList{
-            list-style: none;
-        }
-        .drag-item{
-            background-color: slateblue;
-            padding: 10px;
-            margin-bottom: 5px;
-            cursor: move;
-            width: 200px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="task-1">
@@ -104,6 +50,20 @@
             <li class="drag-item" draggable="true">Nunez</li>
             <li class="drag-item" draggable="true">Chiesa</li>
         </ul>
+    </section>
+    <section id="task-7">
+        <div class="toggle"></div>
+    </section>
+    <section id="task-8">
+        <div class="progress">
+            <div class="progress-bar" id="progress-fill"></div>
+        </div>
+    </section>
+    <section id="task-9">
+        <input type="text" placeholder="Type Something" id="input-9">
+    </section>
+    <section id="task-10">
+        <div id="div-10"></div>
     </section>
     <script src="script.js"></script>
 </body>
